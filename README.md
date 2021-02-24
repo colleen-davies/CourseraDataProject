@@ -92,8 +92,11 @@ names from “activity\_labels.txt”, with all lowercase letters and with
 the underscores replaced with a space.
 
 We begin by extracting the original activity labels using
-`read.table(). We convert  them to lowercase using`tolower()`, and we replace the underscores with space using`sub()`.  We then extract the numeric factors, use`sapply()`and`as.factor()`to convert them to the  character factors, and then replace the`classlabel`column in`measure\_df\`
-with the activities factor.
+`read.table()`. We convert them to lowercase using `tolower()`, and we
+replace the underscores with space using `sub()`. We then extract the
+numeric factors, use `sapply()` and `as.factor()` to convert them to the
+character factors, and then replace the `classlabel` column in
+`measure_df` with the activities factor.
 
 ((4)) Label Data Set
 --------------------
