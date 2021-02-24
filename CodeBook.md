@@ -479,15 +479,15 @@ here are: g = standard gravity units, rad = radians, and s = second.
     subject-activity pair in g.
 39. `avgtimeGravityAccelstdX`: numeric; \[-0.981,0.418\]; the average of
     the standard deviation of the normalized X component of the gravity
-    time domain signal measured by the accelerometer for a
+    acceleration signal measured by the accelerometer for a
     subject-activity pair in g.
 40. `avgtimeGravityAccelstdY`: numeric; \[-0.981,0.300\]; the average of
     the standard deviation of the normalized Y component of the gravity
-    time domain signal measured by the accelerometer for a
+    acceleration signal measured by the accelerometer for a
     subject-activity pair in g.
 41. `avgtimeGravityAccelstdZ`: numeric; \[-0.997,0.088\]; the average of
     the standard deviation of the normalized Z component of the gravity
-    time domain signal measured by the accelerometer for a
+    acceleration signal measured by the accelerometer for a
     subject-activity pair in g.
 42. `avgtimeBodyAccelJerkstdX`: numeric; \[-0.998,0.250\]; the average
     of the standard deviation of the normalized X component of the body
