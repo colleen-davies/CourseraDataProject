@@ -26,6 +26,12 @@ download, unzip, and rename the directory for use with the accompanying
     unzip("HAR.zip", exdir =".")
     file.rename("UCI HAR Dataset", "UCI_HAR_Dataset")
 
+If you have the data downloaded and unzipped in your working directory,
+the following code will rename the folder as required for the analysis
+to run.
+
+    file.rename("UCI HAR Dataset", "UCI_HAR_Dataset")
+
 The script “run\_analysis.R” is split into five sections that correspond
 to the steps outlined in the “Getting and Cleaning Data Course Project”
 description, that is,
