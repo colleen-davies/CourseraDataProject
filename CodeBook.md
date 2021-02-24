@@ -21,8 +21,9 @@ the study include \[1\]:
     set for Machine Learning.
 -   The study authors applied noise-filters and sampled the sensor
     signals in “fixed-width sliding windows of 2.56 sec and 50% overlap
-    (128 readings/window)”. From each window, features were “obtained by
-    calculating variables from the time and frequency domain.” \[1\]
+    (128 readings/window)”\[1\]. From each window, features were
+    “obtained by calculating variables from the time and frequency
+    domain.” \[1\]
 -   The acceleration signal was separated into gravitational and body
     motion components using a Butterworth low-pass filter, with a 0.3 Hz
     cutoff frequency.
@@ -39,16 +40,19 @@ Five major steps were completed using run\_analysis.R to produce the
 final two data sets. They are
 
 1.  *Merge Data Sets*: merges training and testing data sets;
-2.  *Extract Measurements*: extracts only mean() and std() measurements;
+2.  *Extract Measurements*: extracts only `mean()` and `std()`
+    measurements;
 3.  *Name Activities*: descriptively names activities;
 4.  *Label Data Set*: descriptive labels the variables;
 5.  *Create Independent Tidy Data Set*: creates a tidy data set with the
     average of the variables within a subject and activity pair.
 
-A more exhaustive description of how these steps were completed is in
-“README.md”. This section is split into two subsections. The first is
-for the data set produced in steps 1-4 above \[titled “Measurement data
-set”\]. The second is for the tidy data set produced by steps 5 \[titled
+A more explicit description of how these steps were completed is in
+“README.md”.
+
+This section is split into two subsections. The first is for the data
+set produced in steps 1-4 above \[titled “Measurement data set”\]. The
+second is for the tidy data set produced by steps 5 \[titled
 “Independent tidy data set”\]. For both data sets, the first two
 variables are “subject” (the study participant number) and “activity”
 (the physical activity measured) respectively. All other variables are
@@ -62,9 +66,9 @@ named using the following abbreviations:
     Transform (originally “f”)
 -   Gravity: gravity acceleration signal
 -   Gyro: measurement based on gyroscope raw signal
--   Jerk: signal obtained from deriving body linear acceleration and
+-   Jerk: signal obtained from deriving body linear acceleration or
     angular velocity in time
--   Mag: magnitude of the three-dimensional signal produced using
+-   Mag: magnitude of the three-dimensional signal produced using the
     Euclidean norm
 -   mean: mean value of measurement estimated from signal
 -   std: standard deviation of measurement estimated from signal
@@ -81,17 +85,18 @@ the mentor for this helpful suggestion.
 To produce this data set, first the training and testing data sets were
 individually loaded in, and the data from the X, y, and subject files
 were appropriately matched. Then, the training and testing data sets
-were merged. From this merged data set, only mean() and std()
+were merged. From this merged data set, only `mean()` and `std()`
 measurements were extracted. The class labels (y) were re-coded with
 character factors, and the variables were renamed descriptively. The
 variables and data are summarized in the following list. The list
 includes the variable name, type, the interval in which the values lie
-or factor coding, and a description. Note that all numeric features were
-normalized so they range between -1 and 1; that is, they are in the
-interval \[-1,1\]. In general, variables 1 and 2 are identifiers, and
-variables 3 through 35 are means of the measurements with corrresponding
-standard deviations 36 through 68. The unit abbreviations used here are:
-g = standard gravity units, rad = radians, and s = second.
+or factor coding, and a description (including units). Note that all
+numeric features were normalized so they range between -1 and 1; that
+is, they are in the interval \[-1,1\]. In general, variables 1 and 2 are
+identifiers, and variables 3 through 35 are the means of the
+measurements with corresponding standard deviations 36 through 68. The
+unit abbreviations used here are: g = standard gravity units, rad =
+radians, and s = second.
 
 1.  `subject`: integer; \[1,30\]; the subject who performed the activity
     for the window sample.
@@ -298,36 +303,37 @@ g = standard gravity units, rad = radians, and s = second.
     of the normalized magnitude of the result of applying a FFT to the
     body Jerk signal measured by the gyroscope in rad/s<sup>2</sup>.
 
-The descriptions above were based on the “features\_info.txt” file
-provided by the study authors with the data set. The units were based on
-a combination of the two units provided in the study authors’
-“README.txt” and the “features\_info.txt” description. We note that the
-base units for accelerometer measurements are standard gravity units
-(g), while the base units for gyroscope measurements are radians per
-second (rad/s). Since the Jerk signals are produced by deriving these
-measurements in time, then the units for accelerometer Jerk signals are
-g/s and the units for gyroscope Jerk signals are rad/s<sup>2</sup>.
-Finally, we note that taking the mean, standard deviation, magnitude,
-and Fast Fourier Transform of measurements preserves units \[2\].
+The descriptions above were based on the features\_info file provided by
+the study authors with the data set. The units were based on a
+combination of the units provided in the study authors’ README and the
+features\_info description. We note that the base units for
+accelerometer measurements are standard gravity units (g), while the
+base units for gyroscope measurements are radians per second (rad/s).
+Since the Jerk signals are produced by deriving these measurements in
+time, then the units for accelerometer Jerk signals are g/s and the
+units for gyroscope Jerk signals are rad/s<sup>2</sup>. Finally, we note
+that taking the mean, standard deviation, magnitude, and Fast Fourier
+Transform of measurements preserves units \[2\].
 
 ### Independent tidy data set (Step 5)
 
-To produce this data set (avgvar.txt), the data set produced from Steps
+To produce this data set (avgvar.txt), the data set produced in steps
 1-4 was then grouped according to subject and activity, then collapsed
 so that the measurement variables are now the average value for a
 particular subject for a particular activity. For example, rather than
 having multiple observations for subject 1 for the activity “laying”, we
 now have one record for this subject-activity pair in which the numeric
 variables are now the average of all observations of that variable for
-that subject-activity pair. This was achieved using the dplyr package –
-specifically with group\_by(), summarize(), and across(). The variables
-and data are summarized in the following list. The list includes the
-variable name, type, the interval in which the values lie or factor
-coding, and a description. These variables are the average within a
-subject-activity pair of the variables from the above data set. We use
-“avg” for “average” at the start of the variable names to avoid
-confusion with the later “mean” (vs. “std”). The unit abbreviations used
-here are: g = standard gravity units, rad = radians, and s = second.
+that subject-activity pair. This was achieved using the `dplyr` package
+– specifically with `group_by()`, `summarize()`, and `across()`. The
+variables and data are summarized in the following list. The list
+includes the variable name, type, the interval in which the values lie
+or factor coding, and a description (including units). These variables
+are the average within a subject-activity pair of the variables from the
+above data set. We use “avg” for “average” at the start of the variable
+names to avoid confusion with the original `mean` (vs. `std`). The unit
+abbreviations used here are: g = standard gravity units, rad = radians,
+and s = second.
 
 1.  `subject`: integer; 1-30; the subject who performed the activity for
     the window sample.
@@ -598,17 +604,17 @@ here are: g = standard gravity units, rad = radians, and s = second.
     of applying a FFT to the body Jerk signal measured by the gyroscope
     for a subject-activity pair in rad/s<sup>2</sup>.
 
-The descriptions above were based on the “features\_info.txt” file
-provided by the study authors with the data set. The units were based on
-a combination of the two units provided in the study authors’
-“README.txt” and the “features\_info.txt” description. We note that the
-base units for accelerometer measurements are standard gravity units
-(g), while the base units for gyroscope measurements are radians per
-second (rad/s). Since the Jerk signals are produced by deriving these
-measurements in time, then the units for accelerometer Jerk signals are
-g/s and the units for gyroscope Jerk signals are rad/s<sup>2</sup>.
-Finally, we note that taking the mean, standard deviation, magnitude,
-and Fast Fourier Transform of measurements preserves units \[2\].
+The descriptions above were based on the features\_info file provided by
+the study authors with the data set. The units were based on a
+combination of the units provided in the study authors’ README and the
+features\_info description. We note that the base units for
+accelerometer measurements are standard gravity units (g), while the
+base units for gyroscope measurements are radians per second (rad/s).
+Since the Jerk signals are produced by deriving these measurements in
+time, then the units for accelerometer Jerk signals are g/s and the
+units for gyroscope Jerk signals are rad/s<sup>2</sup>. Finally, we note
+that taking the mean, standard deviation, magnitude, and Fast Fourier
+Transform of measurements preserves units \[2\].
 
 Reference:
 ----------
