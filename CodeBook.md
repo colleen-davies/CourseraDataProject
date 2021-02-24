@@ -87,7 +87,7 @@ character factors, and the variables were renamed descriptively. The
 variables and data are summarized in the following list. The list
 includes the variable name, type, the interval in which the values lie
 or factor coding, and a description. Note that all numeric features were
-normalized so they range between -1 and 1, that is, they are in the
+normalized so they range between -1 and 1; that is, they are in the
 interval \[-1,1\]. In general, variables 1 and 2 are identifiers, then
 variables 3 through 35 are means of the measurements with corrresponding
 standard deviations 36 through 68.
