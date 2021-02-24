@@ -163,7 +163,9 @@ References:
 
 \[1\]
 <a href="https://vita.had.co.nz/papers/tidy-data.pdf" class="uri">https://vita.had.co.nz/papers/tidy-data.pdf</a>
+
 \[2\]
 <a href="https://dplyr.tidyverse.org/reference/across.html" class="uri">https://dplyr.tidyverse.org/reference/across.html</a>
+
 \[3\]
 <a href="https://stackoverflow.com/questions/61546643/dplyr-across-function-and-data-frame-length-while-grouping" class="uri">https://stackoverflow.com/questions/61546643/dplyr-across-function-and-data-frame-length-while-grouping</a>
