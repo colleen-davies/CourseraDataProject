@@ -95,8 +95,8 @@ standard deviations 36 through 68.
 1.  `subject`: integer; \[1,30\]; the subject who performed the activity
     for the window sample.
 2.  `activity`: factor; six levels - 1 “laying”, 2 “sitting”, 3
-    “standing”, 4 “walking”, 5 “walking downstairs”, 6 "walking
-    upstairs; the activity completed by the subject for the window
+    “standing”, 4 “walking”, 5 “walking downstairs”, 6 “walking
+    upstairs”; the activity completed by the subject for the window
     sample.
 3.  `timeBodyAccelmeanX`: numeric; \[-1,1\]; the mean of the normalized
     X component of the body time domain signal measured by the
