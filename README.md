@@ -55,6 +55,11 @@ to “subject” and “classlabel” for both data frames to avoid potential
 confusion. Lastly, we merge the two data frames using rbind(). The
 merged data frame is called “full\_df”.
 
+Note that we do not include the Inertial Signals from either data set
+since doing so would not be beneficial. Processing the data would be
+time consuming, and the variables would be removed in the next step, so
+they are omitted in this step instead of the next.
+
 ((2)) Extract Measurements
 --------------------------
 
@@ -104,11 +109,11 @@ the “BodyBody” typo by replacing it using sub with just “Body”. We then
 combine the new names into a vector and use colnames() to implement them
 in measure\_df.
 
-The final variable names are built from the componens listed below, with
-the exception of “subject” and “activity” which have been previously
-explained. The abbreviations used in the final variable names for both
-the main data frame (measure\_df) and the independent tidy data frame
-(avg\_df) are:
+The final variable names are built from the components listed below,
+with the exception of “subject” and “activity” which have been
+previously explained. The abbreviations used in the final variable names
+for both the main data frame (measure\_df) and the independent tidy data
+frame (avg\_df) are:
 
 -   Accel: measurement based on accelerometer raw signal (originally
     “Acc”)
@@ -139,7 +144,12 @@ set in the codebook, CodeBook.md.
 In this section, we further tidy the data set produced in previous steps
 by taking the average of each variable for a subject-activity pair. We
 generate a tidy data text file that meets the principles of Hadley
-Wickham \[1\].
+Wickham \[1\]. Note that each variable is in its own column and each
+different observation of that variable (i.e., each distinct
+subject-activity pair) is in its own row. All of the variables are
+clearly labelled. We observe that the number of observations in this
+data frame, 180, is consistent with all subjects (30) performing all
+activities (6), as expected.
 
 Here we use the dplyr package, which the script installs if necessary
 and loads. We create a data table called avg\_df\_init from our previous
