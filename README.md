@@ -1,4 +1,4 @@
-The Study
+The study
 =========
 
 The data used in this project came from the “Human Activity Recognition
