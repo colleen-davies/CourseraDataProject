@@ -132,20 +132,20 @@ radians, and s = second.
     normalized Z component of the body acceleration Jerk signal measured
     by the accelerometer in g/s.
 12. `timeBodyGyromeanX`: numeric; \[-1,1\]; the mean of the normalized X
-    component of the body acceleration signal measured by the gyroscope
-    in rad/s.
+    component of the body angular velocity signal measured by the
+    gyroscope in rad/s.
 13. `timeBodyGyromeanY`: numeric; \[-1,1\]; the mean of the normalized Y
-    component of the body acceleration signal measured by the gyroscope
-    in rad/s.
+    component of the body angular velocity signal measured by the
+    gyroscope in rad/s.
 14. `timeBodyGyromeanZ`: numeric; \[-1,1\]; the mean of the normalized Z
-    component of the body acceleration signal measured by the gyroscope
-    in rad/s.
+    component of the body angular velocity signal measured by the
+    gyroscope in rad/s.
 15. `timeBodyGyroJerkmeanX`: numeric; \[-1,1\]; the mean of the
-    normalized X component of the body acceleration Jerk signal measured
-    by the gyroscope in rad/s<sup>2</sup>.
+    normalized X component of the body angular velocity Jerk signal
+    measured by the gyroscope in rad/s<sup>2</sup>.
 16. `timeBodyGyroJerkmeanY`: numeric; \[-1,1\]; the mean of the
-    normalized Y component of the body acceleration Jerk signal measured
-    by the gyroscope in rad/s<sup>2</sup>.
+    normalized Y component of the body angular velocity Jerk signal
+    measured by the gyroscope in rad/s<sup>2</sup>.
 17. `timeBodyGyroJerkmeanZ`: numeric; \[-1,1\]; the mean of the
     normalized Z component of the body acceleration Jerk signal measured
     by the gyroscope in rad/s<sup>2</sup>.
@@ -159,11 +159,11 @@ radians, and s = second.
     normalized magnitude of the body acceleration Jerk signal measured
     by the accelerometer in g/s.
 21. `timeBodyGyroMagmean`: numeric; \[-1,1\]; the mean of the normalized
-    magnitude of the body acceleration signal measured by the gyroscope
-    in rad/s.
+    magnitude of the body angular velocity signal measured by the
+    gyroscope in rad/s.
 22. `timeBodyGyroJerkMagmean`: numeric; \[-1,1\]; the mean of the
-    normalized magnitude of the body acceleration Jerk signal measured
-    by the gyroscope in rad/s<sup>2</sup>.
+    normalized magnitude of the body angular velocity Jerk signal
+    measured by the gyroscope in rad/s<sup>2</sup>.
 23. `freqBodyAccelmeanX`: numeric; \[-1,1\]; the mean of the normalized
     X component of the result of applying a FFT to the body signal
     measured by the accelerometer in g.
@@ -231,22 +231,22 @@ radians, and s = second.
     of the normalized Z component of the body acceleration Jerk signal
     measured by the accelerometer in g/s.
 45. `timeBodyGyrostdX`: numeric; \[-1,1\]; the standard deviation of the
-    normalized X component of the body acceleration signal measured by
-    the gyroscope in rad/s.
+    normalized X component of the body angular velocity signal measured
+    by the gyroscope in rad/s.
 46. `timeBodyGyrostdY`: numeric; \[-1,1\]; the standard deviation of the
-    normalized Y component of the body acceleration signal measured by
-    the gyroscope in rad/s.
+    normalized Y component of the body angular velocity signal measured
+    by the gyroscope in rad/s.
 47. `timeBodyGyrostdZ`: numeric; \[-1,1\]; the standard deviation of the
-    normalized Z component of the body acceleration signal measured by
-    the gyroscope in rad/s.
+    normalized Z component of the body angular velocity signal measured
+    by the gyroscope in rad/s.
 48. `timeBodyGyroJerkstdX`: numeric; \[-1,1\]; the standard deviation of
-    the normalized X component of the body acceleration Jerk signal
+    the normalized X component of the body angular velocity Jerk signal
     measured by the gyroscope in rad/s<sup>2</sup>.
 49. `timeBodyGyroJerkstdY`: numeric; \[-1,1\]; the standard deviation of
-    the normalized Y component of the body acceleration Jerk signal
+    the normalized Y component of the body angular velocity Jerk signal
     measured by the gyroscope in rad/s<sup>2</sup>.
 50. `timeBodyGyroJerkstdZ`: numeric; \[-1,1\]; the standard deviation of
-    the normalized Z component of the body acceleration Jerk signal
+    the normalized Z component of the body angular velocity Jerk signal
     measured by the gyroscope in rad/s<sup>2</sup>.
 51. `timeBodyAccelMagstd`: numeric; \[-1,1\]; the standard deviation of
     the normalized magnitude of the body acceleration signal measured by
@@ -258,10 +258,10 @@ radians, and s = second.
     of the normalized magnitude of the body acceleration Jerk signal
     measured by the accelerometer in g/s.
 54. `timeBodyGyroMagstd`: numeric; \[-1,1\]; the standard deviation of
-    the normalized magnitude of the body acceleration signal measured by
-    the gyroscope in rad/s.
+    the normalized magnitude of the body angular velocity signal
+    measured by the gyroscope in rad/s.
 55. `timeBodyGyroJerkMagstd`: numeric; \[-1,1\]; the standard deviation
-    of the normalized magnitude of the body acceleration Jerk signal
+    of the normalized magnitude of the body angular velocity Jerk signal
     measured by the gyroscope in rad/s<sup>2</sup>.
 56. `freqBodyAccelstdX`: numeric; \[-1,1\]; the standard deviation of
     the normalized X component of the result of applying a FFT to the
@@ -378,29 +378,29 @@ and s = second.
     Jerk signal measured by the accelerometer for a subject-activity
     pair in g/s.
 12. `avgtimeBodyGyromeanX`: numeric; \[-0.997,-0.830\]; the average of
-    the mean of the normalized X component of the body acceleration
+    the mean of the normalized X component of the body angular velocity
     signal measured by the gyroscope for a subject-activity pair in
     rad/s.
 13. `avgtimeBodyGyromeanY`: numeric; \[-0.994,-0.644\]; the average of
-    the mean of the normalized Y component of the body acceleration
+    the mean of the normalized Y component of the body angular velocity
     signal measured by the gyroscope for a subject-activity pair in
     rad/s.
 14. `avgtimeBodyGyromeanZ`: numeric; \[-0.991,-0.610\]; the average of
-    the mean of the normalized Z component of the body acceleration
+    the mean of the normalized Z component of the body angular velocity
     signal measured by the gyroscope for a subject-activity pair in
     rad/s.
 15. `avgtimeBodyGyroJerkmeanX`: numeric; \[0.043,0.130\]; the average of
-    the mean of the normalized X component of the body acceleration Jerk
-    signal measured by the gyroscope for a subject-activity pair in
+    the mean of the normalized X component of the body angular velocity
+    Jerk signal measured by the gyroscope for a subject-activity pair in
     rad/s<sup>2</sup>.
 16. `avgtimeBodyGyroJerkmeanY`: numeric; \[-0.039,0.057\]; the average
-    of the mean of the normalized Y component of the body acceleration
-    Jerk signal measured by the gyroscope for a subject-activity pair in
-    rad/s<sup>2</sup>.
+    of the mean of the normalized Y component of the body angular
+    velocity Jerk signal measured by the gyroscope for a
+    subject-activity pair in rad/s<sup>2</sup>.
 17. `avgtimeBodyGyroJerkmeanZ`: numeric; \[-0.067,0.038\]; the average
-    of the mean of the normalized Z component of the body acceleration
-    Jerk signal measured by the gyroscope for a subject-activity pair in
-    rad/s<sup>2</sup>.
+    of the mean of the normalized Z component of the body angular
+    velocity Jerk signal measured by the gyroscope for a
+    subject-activity pair in rad/s<sup>2</sup>.
 18. `avgtimeBodyAccelMagmean`: numeric; \[-0.995,0.544\]; the average of
     the mean of the normalized magnitude of the body acceleration signal
     measured by the accelerometer for a subject-activity pair in g.
@@ -413,10 +413,11 @@ and s = second.
     acceleration Jerk signal measured by the accelerometer for a
     subject-activity pair in g/s.
 21. `avgtimeBodyGyroMagmean`: numeric; \[-0.206,0.193\]; the average of
-    the mean of the normalized magnitude of the body acceleration signal
-    measured by the gyroscope for a subject-activity pair in rad/s.
+    the mean of the normalized magnitude of the body angular velocity
+    signal measured by the gyroscope for a subject-activity pair in
+    rad/s.
 22. `avgtimeBodyGyroJerkMagmean`: numeric; \[-0.204,0.027\]; the average
-    of the mean of the normalized magnitude of the body acceleration
+    of the mean of the normalized magnitude of the body angular velocity
     Jerk signal measured by the gyroscope for a subject-activity pair in
     rad/s<sup>2</sup>.
 23. `avgfreqBodyAccelmeanX`: numeric; \[-0.072,0.179\]; the average of
@@ -508,28 +509,28 @@ and s = second.
     acceleration Jerk signal measured by the accelerometer for a
     subject-activity pair in g/s.
 45. `avgtimeBodyGyrostdX`: numeric; \[-0.989,0.281\]; the average of the
-    standard deviation of the normalized X component of the body
-    acceleration signal measured by the gyroscope for a subject-activity
+    standard deviation of the normalized X component of the body angular
+    velocity signal measured by the gyroscope for a subject-activity
     pair in rad/s.
 46. `avgtimeBodyGyrostdY`: numeric; \[-0.997,0.659\]; the average of the
-    standard deviation of the normalized Y component of the body
-    acceleration signal measured by the gyroscope for a subject-activity
+    standard deviation of the normalized Y component of the body angular
+    velocity signal measured by the gyroscope for a subject-activity
     pair in rad/s.
 47. `avgtimeBodyGyrostdZ`: numeric; \[-0.991,0.560\]; the average of the
-    standard deviation of the normalized Z component of the body
-    acceleration signal measured by the gyroscope for a subject-activity
+    standard deviation of the normalized Z component of the body angular
+    velocity signal measured by the gyroscope for a subject-activity
     pair in rad/s.
 48. `avgtimeBodyGyroJerkstdX`: numeric; \[-0.987,0.687\]; the average of
     the standard deviation of the normalized X component of the body
-    acceleration Jerk signal measured by the gyroscope for a
+    angular velocity Jerk signal measured by the gyroscope for a
     subject-activity pair in rad/s<sup>2</sup>.
 49. `avgtimeBodyGyroJerkstdY`: numeric; \[-0.995,0.474\]; the average of
     the standard deviation of the normalized Y component of the body
-    acceleration Jerk signal measured by the gyroscope for a
+    angular velocity Jerk signal measured by the gyroscope for a
     subject-activity pair in rad/s<sup>2</sup>.
 50. `avgtimeBodyGyroJerkstdZ`: numeric; \[-0.989,0.277\]; the average of
     the standard deviation of the normalized Z component of the body
-    acceleration Jerk signal measured by the gyroscope for a
+    angular velocity Jerk signal measured by the gyroscope for a
     subject-activity pair in rad/s<sup>2</sup>.
 51. `avgtimeBodyAccelMagstd`: numeric; \[-0.992,0.158\]; the average of
     the standard deviation of the normalized magnitude of the body
@@ -545,11 +546,11 @@ and s = second.
     subject-activity pair in g/s.
 54. `avgtimeBodyGyroMagstd`: numeric; \[-0.993,-0.006\]; the average of
     the standard deviation of the normalized magnitude of the body
-    acceleration signal measured by the gyroscope for a subject-activity
-    pair in rad/s.
+    angular velocity signal measured by the gyroscope for a
+    subject-activity pair in rad/s.
 55. `avgtimeBodyGyroJerkMagstd`: numeric; \[-0.993,0.475\]; the average
     of the standard deviation of the normalized magnitude of the body
-    acceleration Jerk signal measured by the gyroscope for a
+    angular velocity Jerk signal measured by the gyroscope for a
     subject-activity pair in rad/s<sup>2</sup>.
 56. `avgfreqBodyAccelstdX`: numeric; \[-0.994,0.329\]; the average of
     the standard deviation of the normalized X component of the result
