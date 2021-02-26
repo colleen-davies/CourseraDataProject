@@ -58,14 +58,14 @@ variables are “subject” (the study participant number) and “activity”
 (the physical activity measured) respectively. All other variables are
 named using the following abbreviations:
 
--   `Accel`: measurement based on accelerometer raw signal (originally
-    `Acc`)
+-   `Accel`: acceleration measurement based on accelerometer raw signal
+    (originally `Acc`)
 -   `avg`: average of measurement within a subject-activity pair
 -   `Body`: body acceleration signal
 -   `freq`: frequency domain signal produced using a Fast Fourier
     Transform (originally `f`)
 -   `Gravity`: gravity acceleration signal
--   `Gyro`: measurement based on gyroscope raw signal
+-   `Gyro`: angular velocity measurement based on gyroscope raw signal
 -   `Jerk`: signal obtained from deriving body linear acceleration or
     angular velocity in time
 -   `Mag`: magnitude of the three-dimensional signal produced using the
